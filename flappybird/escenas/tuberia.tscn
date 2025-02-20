@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckurqvscw1uc"]
+
+[ext_resource type="Texture2D" uid="uid://d4e4w7kw1ytg6" path="res://assets/FlappyBirdR-resources/Sprites/tuberia.png" id="1_jj5gk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mha3n"]
+size = Vector2(37, 328.5)
+
+[node name="Tuberia" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, 167.25)
+scale = Vector2(1.69231, 2.47037)
+texture = ExtResource("1_jj5gk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(112.5, 166.75)
+shape = SubResource("RectangleShape2D_mha3n")

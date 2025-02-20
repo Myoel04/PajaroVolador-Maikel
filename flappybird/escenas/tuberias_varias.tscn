@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce3xjl2bfcaac"]
+
+[ext_resource type="Script" path="res://tuberias_varias.gd" id="1_i3ki1"]
+[ext_resource type="PackedScene" uid="uid://ckurqvscw1uc" path="res://escenas/tuberia.tscn" id="1_ww34r"]
+
+[node name="tuberias_varias" type="Node2D"]
+position = Vector2(120, 256)
+script = ExtResource("1_i3ki1")
+
+[node name="Tuberia_1ARRIBA" parent="." instance=ExtResource("1_ww34r")]
+position = Vector2(-80, -376)
+rotation = 6.28319
+
+[node name="Tuberia_2ABAJO" parent="." instance=ExtResource("1_ww34r")]
+position = Vector2(144, 376)
+rotation = 3.14159
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(32, 0)
+
+[connection signal="body_entered" from="Tuberia_1ARRIBA" to="." method="_on_tuberia_2abajo_pajaro"]
+[connection signal="body_entered" from="Tuberia_2ABAJO" to="." method="_on_tuberia_2abajo_pajaro"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_exit"]
