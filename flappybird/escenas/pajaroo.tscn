@@ -29,7 +29,7 @@ scale = Vector2(0.225, 0.284247)
 sprite_frames = SubResource("SpriteFrames_4k461")
 animation = &"aleteo"
 autoplay = "aleteo"
-frame_progress = 0.0212063
+frame_progress = 0.550751
 
 [node name="pajaroColision" type="CollisionShape2D" parent="."]
 position = Vector2(-1.19209e-07, -1.19209e-07)

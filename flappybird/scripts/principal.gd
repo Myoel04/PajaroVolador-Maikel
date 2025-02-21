@@ -2,6 +2,11 @@ extends Node
 @export var tuberia_escena: PackedScene
 
 func _ready() -> void:
+	#$TimerTuberia.start()
+	pass
+	
+#cuando comience el juego al darle a tap 
+func start_game():
 	$TimerTuberia.start()
 
 func crear_tuberia():

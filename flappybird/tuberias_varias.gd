@@ -17,6 +17,7 @@ func _on_visible_on_screen_exit() -> void:
 func _on_tuberia_2abajo_pajaro(body: Node2D) -> void:
 	if body is Pajaro:          #cuando choque el pájaro muere
 		Global.gameOver() 
+		$TimerTuberia.stop()
 
 #método para que al pasar una tuberia se sume un punto 
 func _on_area_2d_body_entered(body: Node2D) -> void:

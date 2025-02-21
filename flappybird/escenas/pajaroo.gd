@@ -6,9 +6,9 @@ const JUMP_VELOCITY = -300.0 #salto que hace el pajaro
 
 #CONFIGURACION GRAVEDAD
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	if Global.is_start:
+		if not is_on_floor():
+			velocity += get_gravity() * delta
 #CONFIGURACION DEL SALTO 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
