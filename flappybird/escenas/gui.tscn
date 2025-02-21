@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6yes35jwc5fb"]
+[gd_scene load_steps=4 format=3 uid="uid://c6yes35jwc5fb"]
 
 [ext_resource type="Script" path="res://scripts/gui.gd" id="1_1rljr"]
 [ext_resource type="FontFile" uid="uid://dsfefdf6jeloj" path="res://assets/Flappy-Bird-master/lib/res/fonts/flappy-font.ttf" id="1_f45cv"]
+[ext_resource type="Texture2D" uid="uid://b44mdotiags3f" path="res://assets/Flappy-Bird-master/mano.png" id="3_3i265"]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_1rljr")
@@ -19,3 +20,54 @@ theme_override_font_sizes/font_size = 50
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="lNombreJuego" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -184.0
+offset_right = 133.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_f45cv")
+theme_override_font_sizes/font_size = 35
+text = "PajaroVolador"
+
+[node name="lEmpezar" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 200.0
+offset_right = 261.0
+offset_bottom = 251.0
+theme_override_colors/font_color = Color(0, 0.92549, 0, 1)
+theme_override_fonts/font = ExtResource("1_f45cv")
+theme_override_font_sizes/font_size = 50
+text = "Empezar!"
+
+[node name="lTap" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 432.0
+offset_right = 110.0
+offset_bottom = 483.0
+theme_override_fonts/font = ExtResource("1_f45cv")
+theme_override_font_sizes/font_size = 50
+text = "TAP"
+horizontal_alignment = 1
+
+[node name="lTap2" type="Label" parent="."]
+offset_left = 181.0
+offset_top = 432.0
+offset_right = 267.0
+offset_bottom = 483.0
+theme_override_fonts/font = ExtResource("1_f45cv")
+theme_override_font_sizes/font_size = 50
+text = "TAP"
+horizontal_alignment = 1
+
+[node name="Mano" type="Sprite2D" parent="."]
+position = Vector2(144, 424)
+scale = Vector2(0.126289, 0.119464)
+texture = ExtResource("3_3i265")
