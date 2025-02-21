@@ -1,6 +1,7 @@
 extends Node2D
 
-var velocity = 300
+var velocity = 200
+
 
 func _ready() -> void:
 	position.x = 190 #posicion con la que se empieza
@@ -15,4 +16,9 @@ func _on_visible_on_screen_exit() -> void:
 
 func _on_tuberia_2abajo_pajaro(body: Node2D) -> void:
 	if body is Pajaro:          #cuando choque el pájaro muere
-		print("Murió el pájaro")
+		Global.gameOver()
+
+#método para que al pasar una tuberia se sume un punto 
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body is Pajaro:
+		Global.increment_score()

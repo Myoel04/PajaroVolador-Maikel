@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6yes35jwc5fb"]
+
+[ext_resource type="Script" path="res://scripts/gui.gd" id="1_1rljr"]
+[ext_resource type="FontFile" uid="uid://dsfefdf6jeloj" path="res://assets/Flappy-Bird-master/lib/res/fonts/flappy-font.ttf" id="1_f45cv"]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_1rljr")
+
+[node name="lPuntuacion" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_f45cv")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
