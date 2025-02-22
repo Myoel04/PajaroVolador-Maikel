@@ -7,11 +7,12 @@
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_1rljr")
 
-[node name="Mensaje" type="Sprite2D" parent="."]
-position = Vector2(144, 456)
+[node name="Mensaje" type="Sprite2D" parent="." groups=["etiquetasInicio"]]
+position = Vector2(136, 472)
 scale = Vector2(0.126289, 0.119464)
+metadata/_edit_group_ = true
 
-[node name="lNombreJuego" type="Label" parent="Mensaje"]
+[node name="lNombreJuego" type="Label" parent="Mensaje" groups=["etiquetasInicio"]]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -27,7 +28,7 @@ theme_override_fonts/font = ExtResource("1_f45cv")
 theme_override_font_sizes/font_size = 250
 text = "PajaroVolador"
 
-[node name="lEmpezar" type="Label" parent="Mensaje"]
+[node name="lEmpezar" type="Label" parent="Mensaje" groups=["etiquetasInicio"]]
 offset_left = -760.164
 offset_top = -2678.63
 offset_right = 839.836
@@ -37,7 +38,7 @@ theme_override_fonts/font = ExtResource("1_f45cv")
 theme_override_font_sizes/font_size = 350
 text = "Empezar!"
 
-[node name="lTap" type="Label" parent="Mensaje"]
+[node name="lTap" type="Label" parent="Mensaje" groups=["etiquetasInicio"]]
 offset_left = -950.204
 offset_top = -535.726
 offset_right = -350.204
@@ -47,7 +48,7 @@ theme_override_font_sizes/font_size = 350
 text = "TAP"
 horizontal_alignment = 1
 
-[node name="lTap2" type="Label" parent="Mensaje"]
+[node name="lTap2" type="Label" parent="Mensaje" groups=["etiquetasInicio"]]
 offset_left = 292.98
 offset_top = -535.726
 offset_right = 892.98
@@ -57,7 +58,7 @@ theme_override_font_sizes/font_size = 350
 text = "TAP"
 horizontal_alignment = 1
 
-[node name="Mano" type="Sprite2D" parent="Mensaje"]
+[node name="Mano" type="Sprite2D" parent="Mensaje" groups=["etiquetasInicio"]]
 texture = ExtResource("3_3i265")
 
 [node name="lPuntuacion" type="Label" parent="."]

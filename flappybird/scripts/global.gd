@@ -2,12 +2,16 @@ extends Node
 
 signal on_increment_score #creo una señal para cuando pase el pajaro entre
 #las tuberias
+signal on_game_start
 
 var score := 0
 var is_start := false
 
 func start_game():
 	is_start = true
+	score = 0
+	emit_signal("on_increment_score")
+	emit_signal("on_game_start") #emitir señal de que empezo el juego
 
 func increment_score():
 	score += 1

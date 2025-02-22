@@ -12,6 +12,7 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		if Global.is_start == false:
 				Global.start_game()
+				start_game()
 
 
 func change_score():

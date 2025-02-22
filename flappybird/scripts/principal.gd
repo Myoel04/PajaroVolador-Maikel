@@ -3,10 +3,11 @@ extends Node
 
 func _ready() -> void:
 	#$TimerTuberia.start()
+	Global.connect("on_game_start", start_game)
 	pass
 	
 #cuando comience el juego al darle a tap 
-func start_game():
+func start_game(): 
 	$TimerTuberia.start()
 
 func crear_tuberia():
