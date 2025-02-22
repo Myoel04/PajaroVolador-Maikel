@@ -74,3 +74,13 @@ theme_override_font_sizes/font_size = 50
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="lGameOver" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 200.0
+offset_right = 267.0
+offset_bottom = 251.0
+theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f45cv")
+theme_override_font_sizes/font_size = 50
+text = "GameOver"

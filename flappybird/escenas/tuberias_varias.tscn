@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ce3xjl2bfcaac"]
+[gd_scene load_steps=6 format=3 uid="uid://ce3xjl2bfcaac"]
 
 [ext_resource type="Script" path="res://tuberias_varias.gd" id="1_i3ki1"]
 [ext_resource type="PackedScene" uid="uid://ckurqvscw1uc" path="res://escenas/tuberia.tscn" id="1_ww34r"]
+[ext_resource type="AudioStream" uid="uid://d0hc4da8gtqsk" path="res://assets/FlappyBirdR-resources/SFX/sfx_point.wav" id="3_3ame4"]
+[ext_resource type="AudioStream" uid="uid://keysj0bkxjrj" path="res://assets/FlappyBirdR-resources/SFX/sfx_die.wav" id="4_aeigw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm84b"]
 size = Vector2(20, 160)
@@ -26,6 +28,12 @@ position = Vector2(192, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(160, 8)
 shape = SubResource("RectangleShape2D_pm84b")
+
+[node name="AudioPunto" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3ame4")
+
+[node name="AudioMuerte" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_aeigw")
 
 [connection signal="body_entered" from="Tuberia_1ARRIBA" to="." method="_on_tuberia_2abajo_pajaro"]
 [connection signal="body_entered" from="Tuberia_2ABAJO" to="." method="_on_tuberia_2abajo_pajaro"]

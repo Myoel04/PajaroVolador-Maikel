@@ -13,6 +13,16 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
+		rotation = deg_to_rad(-40) #si presiono espacio se empuja arriba
+		$AudioAleteo.play()
 
 
 	move_and_slide() #sin esto no se mueve el pajaro
+	rotacion_pajaro()
+
+
+func rotacion_pajaro():
+	if velocity.y >0 and rad_to_deg(rotation)<90:
+		rotation += 2 * deg_to_rad(1)
+	elif velocity.y > 0 and rad_to_deg(rotation)>-40:
+		rotation -= 2 * deg_to_rad(1)

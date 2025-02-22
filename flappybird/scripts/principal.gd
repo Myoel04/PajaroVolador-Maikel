@@ -23,3 +23,4 @@ func _on_suelo_area_body_entered(body: Node2D) -> void:
 	if body is Pajaro:
 		Global.gameOver()
 		$TimerTuberia.stop() #para que no se creen mas tuberias
+		$AudioMuerte.play()
