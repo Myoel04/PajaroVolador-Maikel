@@ -84,3 +84,24 @@ theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_f45cv")
 theme_override_font_sizes/font_size = 50
 text = "GameOver"
+
+[node name="lNv1" type="Label" parent="."]
+offset_left = 8.0
+offset_right = 48.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_f45cv")
+text = "Nv:1"
+
+[node name="lNv2" type="Label" parent="."]
+offset_left = 8.0
+offset_right = 48.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_f45cv")
+text = "Nv:2"
+
+[node name="lNv3" type="Label" parent="."]
+offset_left = 8.0
+offset_right = 48.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_f45cv")
+text = "Nv:3"

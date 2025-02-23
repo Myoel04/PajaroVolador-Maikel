@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide() #sin esto no se mueve el pajaro
 	rotacion_pajaro()
 
-
+#rotación del pajaro hacia arriba/abajo
 func rotacion_pajaro():
 	if velocity.y >0 and rad_to_deg(rotation)<90:
 		rotation += 2 * deg_to_rad(1)

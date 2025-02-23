@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7q8cfhqkttj2"]
+[gd_scene load_steps=10 format=3 uid="uid://7q8cfhqkttj2"]
 
 [ext_resource type="Script" path="res://scripts/principal.gd" id="1_aa5qt"]
 [ext_resource type="Texture2D" uid="uid://wjdl2ocqc61f" path="res://assets/Flappy Bird Assets 1.6 (Zip)/Flappy Bird Assets/Background/Background3.png" id="1_pru4n"]
@@ -10,6 +10,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kg3qm"]
 size = Vector2(288, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u135p"]
+size = Vector2(308, 20)
 
 [node name="Principal" type="Node"]
 script = ExtResource("1_aa5qt")
@@ -51,5 +54,12 @@ shape = SubResource("RectangleShape2D_kg3qm")
 [node name="AudioMuerte" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_us4hp")
 
+[node name="CieloArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CieloArea"]
+position = Vector2(144, 0)
+shape = SubResource("RectangleShape2D_u135p")
+
 [connection signal="timeout" from="TimerTuberia" to="." method="_on_timer_tuberia_timeout"]
 [connection signal="body_entered" from="SueloArea" to="." method="_on_suelo_area_body_entered"]
+[connection signal="body_entered" from="CieloArea" to="." method="_on_cielo_area_body_entered"]

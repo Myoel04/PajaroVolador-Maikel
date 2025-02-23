@@ -7,6 +7,7 @@ func _ready() -> void:
 	position.x = 190 #posicion con la que se empieza
 	position.y = randi_range(120,376)#qeu cambie entre los rangos
 
+
 func _process(delta: float) -> void:
 	position.x -= delta * velocity
 
@@ -15,10 +16,10 @@ func _on_visible_on_screen_exit() -> void:
 
 
 func _on_tuberia_2abajo_pajaro(body: Node2D) -> void:
-	if body is Pajaro: 
-	  #cuando choque el pájaro muere
-		Global.gameOver()
-		$AudioMuerte.play()
+	if body is Pajaro:
+		$AudioMuerte.play()  # Reproduce el sonido primero
+		Global.gameOver()  # Luego llama a gameOver
+
 
 
 
