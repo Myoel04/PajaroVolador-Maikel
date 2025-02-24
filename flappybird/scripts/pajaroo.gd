@@ -9,8 +9,9 @@ func _physics_process(delta: float) -> void:
 	if Global.is_start:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
+
 #CONFIGURACION DEL SALTO 
-	# Handle jump.
+
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
 		rotation = deg_to_rad(-40) #si presiono espacio se empuja arriba

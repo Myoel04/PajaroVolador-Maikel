@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://qev44xdtdo8n"]
 
-[ext_resource type="Script" path="res://escenas/pajaroo.gd" id="1_bp157"]
+[ext_resource type="Script" path="res://scripts/pajaroo.gd" id="1_bp157"]
 [ext_resource type="Texture2D" uid="uid://bt31p17jjv14" path="res://assets/Flappy Bird Assets 1.6 (Zip)/Flappy Bird Assets/Player/StyleBird1/pajaro1.png" id="1_jrlwd"]
 [ext_resource type="Texture2D" uid="uid://dniusvyr1qfob" path="res://assets/Flappy Bird Assets 1.6 (Zip)/Flappy Bird Assets/Player/StyleBird1/pajaro2.png" id="2_hrg6x"]
 [ext_resource type="AudioStream" uid="uid://dnpklyaxmax7h" path="res://assets/FlappyBirdR-resources/SFX/sfx_wing.wav" id="4_xrwid"]

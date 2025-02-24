@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b8ob2dhkwihcd" path="res://assets/Flappy Bird Assets 1.6 (Zip)/suelo2.png" id="2_qsktu"]
 [ext_resource type="PackedScene" uid="uid://qev44xdtdo8n" path="res://escenas/pajaroo.tscn" id="3_yimyq"]
 [ext_resource type="PackedScene" uid="uid://c6yes35jwc5fb" path="res://escenas/gui.tscn" id="6_6m8vd"]
-[ext_resource type="AudioStream" uid="uid://keysj0bkxjrj" path="res://assets/FlappyBirdR-resources/SFX/sfx_die.wav" id="7_us4hp"]
+[ext_resource type="AudioStream" uid="uid://cupxj3kf80d56" path="res://assets/FlappyBirdR-resources/SFX/sfx_die.ogg" id="7_us4hp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kg3qm"]
 size = Vector2(288, 20)
@@ -51,14 +51,14 @@ wait_time = 1.5
 position = Vector2(146, 502)
 shape = SubResource("RectangleShape2D_kg3qm")
 
-[node name="AudioMuerte" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_us4hp")
-
 [node name="CieloArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CieloArea"]
 position = Vector2(144, 0)
 shape = SubResource("RectangleShape2D_u135p")
+
+[node name="AudioGameOver" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_us4hp")
 
 [connection signal="timeout" from="TimerTuberia" to="." method="_on_timer_tuberia_timeout"]
 [connection signal="body_entered" from="SueloArea" to="." method="_on_suelo_area_body_entered"]

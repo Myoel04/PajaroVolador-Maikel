@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://tuberias_varias.gd" id="1_i3ki1"]
 [ext_resource type="PackedScene" uid="uid://ckurqvscw1uc" path="res://escenas/tuberia.tscn" id="1_ww34r"]
 [ext_resource type="AudioStream" uid="uid://d0hc4da8gtqsk" path="res://assets/FlappyBirdR-resources/SFX/sfx_point.wav" id="3_3ame4"]
-[ext_resource type="AudioStream" uid="uid://keysj0bkxjrj" path="res://assets/FlappyBirdR-resources/SFX/sfx_die.wav" id="4_aeigw"]
+[ext_resource type="AudioStream" uid="uid://cupxj3kf80d56" path="res://assets/FlappyBirdR-resources/SFX/sfx_die.ogg" id="4_aeigw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm84b"]
 size = Vector2(20, 160)
@@ -32,7 +32,7 @@ shape = SubResource("RectangleShape2D_pm84b")
 [node name="AudioPunto" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_3ame4")
 
-[node name="AudioMuerte" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioGameOver" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_aeigw")
 
 [connection signal="body_entered" from="Tuberia_1ARRIBA" to="." method="_on_tuberia_2abajo_pajaro"]

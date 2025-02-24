@@ -23,7 +23,7 @@ func _on_suelo_area_body_entered(body: Node2D) -> void:
 	if body is Pajaro:
 		Global.gameOver()
 		$TimerTuberia.stop() #para que no se creen mas tuberias
-		$AudioMuerte.play()
+		$AudioGameOver.play()
 
 
 ##funcion para que no se vaya por arriba
@@ -31,4 +31,4 @@ func _on_cielo_area_body_entered(body: Node2D) -> void:
 	if body is Pajaro:
 		Global.gameOver()
 		$TimerTuberia.stop()
-		$AudioMuerte.play()
+		$AudioGameOver.play()

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://keysj0bkxjrj"
-path="res://.godot/imported/sfx_die.wav-6bec4bf4bf43437fbb56acd6466c506d.sample"
+path="res://.godot/imported/sfx_die.mp3-a771490240c83d458bb168484cf5a18a.sample"
 
 [deps]
 
-source_file="res://assets/FlappyBirdR-resources/SFX/sfx_die.wav"
-dest_files=["res://.godot/imported/sfx_die.wav-6bec4bf4bf43437fbb56acd6466c506d.sample"]
+source_file="res://assets/FlappyBirdR-resources/SFX/sfx_die.mp3"
+dest_files=["res://.godot/imported/sfx_die.mp3-a771490240c83d458bb168484cf5a18a.sample"]
 
 [params]
 
