@@ -2,10 +2,9 @@ extends Node2D
 
 var velocity = 200
 
-
 func _ready() -> void:
 	position.x = 190 #posicion con la que se empieza
-	position.y = randi_range(120,376)#qeu cambie entre los rangos
+	position.y = randi_range(120,370)#qeu cambie entre los rangos
 
 
 func _process(delta: float) -> void:
@@ -25,3 +24,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Pajaro:
 		Global.increment_score()
 		$AudioPunto.play()
+
+func aumentarVelocidad(velocidad):
+	velocity = velocidad

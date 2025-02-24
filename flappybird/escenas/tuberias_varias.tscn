@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm84b"]
 size = Vector2(20, 160)
 
-[node name="tuberias_varias" type="Node2D"]
+[node name="tuberias_varias" type="Node2D" groups=["tuberia"]]
 position = Vector2(120, 256)
 script = ExtResource("1_i3ki1")
 

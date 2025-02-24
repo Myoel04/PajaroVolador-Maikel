@@ -26,6 +26,7 @@ func _input(event: InputEvent) -> void:
 				Global.start_game()
 				#start_game()
 
+#acutalización del nivel
 func update_level_display():
 	$lNv1.hide()
 	$lNv2.hide()
@@ -38,18 +39,18 @@ func update_level_display():
 		3:
 			$lNv3.show()
 
-
+#cambiar la puntuacion
 func change_score():
 	$lPuntuacion.text = str(Global.score)
 	update_level_display()
 
-
+#funcion de qeu empiece el juego
 func start_game():
 	$Mensaje.hide()
 	update_level_display()
 
-
+#funcion cuando acaba el juego
 func game_over():
 	$lGameOver.show() #muestro el mensaje de "GameOver"
-	await get_tree().create_timer(3).timeout #tiempo de mostrar el mensaje
+	await get_tree().create_timer(2).timeout #tiempo de mostrar el mensaje
 	get_tree().reload_current_scene() ##ejecuta toda la escena de nuevo

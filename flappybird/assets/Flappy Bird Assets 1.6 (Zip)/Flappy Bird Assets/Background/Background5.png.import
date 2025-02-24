@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://blmctrrjydfn1"
 path.s3tc="res://.godot/imported/Background5.png-0237baa68b26a596b448e49589652bce.s3tc.ctex"
+path.etc2="res://.godot/imported/Background5.png-0237baa68b26a596b448e49589652bce.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Flappy Bird Assets 1.6 (Zip)/Flappy Bird Assets/Background/Background5.png"
-dest_files=["res://.godot/imported/Background5.png-0237baa68b26a596b448e49589652bce.s3tc.ctex"]
+dest_files=["res://.godot/imported/Background5.png-0237baa68b26a596b448e49589652bce.s3tc.ctex", "res://.godot/imported/Background5.png-0237baa68b26a596b448e49589652bce.etc2.ctex"]
 
 [params]
 

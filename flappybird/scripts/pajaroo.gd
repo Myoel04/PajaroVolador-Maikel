@@ -1,7 +1,6 @@
 extends CharacterBody2D
 class_name Pajaro
 
-const SPEED = 300.0
 const JUMP_VELOCITY = -300.0 #salto que hace el pajaro
 
 #CONFIGURACION GRAVEDAD
@@ -16,7 +15,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		rotation = deg_to_rad(-40) #si presiono espacio se empuja arriba
 		$AudioAleteo.play()
-
 
 	move_and_slide() #sin esto no se mueve el pajaro
 	rotacion_pajaro()
