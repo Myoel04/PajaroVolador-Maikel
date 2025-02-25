@@ -8,7 +8,10 @@ func _ready() -> void:
 	$lGameOver.hide() #cuando empieza el gameover escondido
 	$Mensaje.show() #se muestra el menu inicio
 	esconderNivel()
+	$lPuntuacion2.hide()
 	get_tree().paused = false  #para comenzar de nuevo  
+
+
 #esconder los niveles
 func esconderNivel():
 	$lNv1.hide()
@@ -51,6 +54,9 @@ func start_game():
 
 #funcion cuando acaba el juego
 func game_over():
-	$lGameOver.show() #muestro el mensaje de "GameOver"
-	await get_tree().create_timer(2).timeout #tiempo de mostrar el mensaje
-	get_tree().reload_current_scene() ##ejecuta toda la escena de nuevo
+	$lGameOver.show() # Muestra el mensaje de "GameOver"
+	$lPuntuacion.hide() # Oculta la puntuación actual
+	$lPuntuacion2.show() # Muestra la puntuación total
+	$lPuntuacion2.text = "Total " + str(Global.score) # Actualiza el texto con el puntaje final
+	await get_tree().create_timer(2).timeout # Tiempo para mostrar el mensaje
+	get_tree().reload_current_scene() # Reinicia la escena
