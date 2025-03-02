@@ -9,13 +9,13 @@ func _physics_process(delta: float) -> void:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 
-#CONFIGURACION DEL SALTO 
-
+#CONFIGURACION DEL SALTO CON EL ESPACIO
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
 		rotation = deg_to_rad(-40) #si presiono espacio se empuja arriba
 		$AudioAleteo.play()
 
+#MOVER EL PAJARO SEGUN VELOCIDAD Y FISICA APLICADO
 	move_and_slide() #sin esto no se mueve el pajaro
 	rotacion_pajaro()
 

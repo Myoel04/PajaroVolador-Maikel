@@ -1,18 +1,18 @@
 extends CanvasLayer
 
+#INICIALIZA AL CARGARSE EL NODO, CONECTA SEÑALES Y PREPARA MENU
 func _ready() -> void:
-	Global.connect("on_increment_score", change_score)#cada vez que se emita la señal se cambia el score
-	#Global.increment_score("on_increment_score",change_score())
-	Global.connect("on_game_over", game_over) #escuchar señal
+	Global.connect("on_increment_score", change_score)
+	Global.connect("on_game_over", game_over) 
 	Global.connect("on_game_start",start_game)
-	$lGameOver.hide() #cuando empieza el gameover escondido
-	$Mensaje.show() #se muestra el menu inicio
+	$lGameOver.hide()
+	$Mensaje.show() 
 	esconderNivel()
 	$lPuntuacion2.hide()
 	get_tree().paused = false  #para comenzar de nuevo  
 
 
-#esconder los niveles
+#ESCONDER LOS NIVELES EN EL MENU
 func esconderNivel():
 	$lNv1.hide()
 	$lNv2.hide()
@@ -22,14 +22,13 @@ func _process(delta: float) -> void:
 	#$lPuntuacion.text = str(Global.score) #cojo la puntuacion la paso a texto y se la asigno al score
 	pass
 
-#si se pulsa el espacio empieza el juego 
+#EMPEZAR EL JUEGO CON EL ESPACIO O RATÓN
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		if not Global.is_start : ##==false
 				Global.start_game()
-				#start_game()
 
-#acutalización del nivel
+#acutalización de vista del nivel
 func update_level_display():
 	$lNv1.hide()
 	$lNv2.hide()
@@ -42,17 +41,17 @@ func update_level_display():
 		3:
 			$lNv3.show()
 
-#cambiar la puntuacion
+#actualizar la puntuacion mostrada
 func change_score():
 	$lPuntuacion.text = str(Global.score)
 	update_level_display()
 
-#funcion de qeu empiece el juego
+#funcion de empezar el juego
 func start_game():
 	$Mensaje.hide()
 	update_level_display()
 
-#funcion cuando acaba el juego
+#funcion cuando acaba el juego para mostrar y ocultar labels
 func game_over():
 	$lGameOver.show() # Muestra el mensaje de "GameOver"
 	$lPuntuacion.hide() # Oculta la puntuación actual
