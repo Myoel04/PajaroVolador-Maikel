@@ -16,7 +16,7 @@ Pajaro Volador es un juego móvil(también agregado para pc) donde el jugador co
 ## Cómo jugar
 
 1. Clona el repositorio en tu máquina local.
-2. Abre la carpeta 'juegoPC' donde está la versión para pc.
+2. Abre la carpeta 'juegoMaikel' donde está la versión para pc.(IMPORTANTE: descargar junto con el archivo ".pck")
 3. En caso para móvil, descarga el apk.
 4. Disfruta.
 
