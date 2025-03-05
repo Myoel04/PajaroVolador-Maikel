@@ -1,8 +1,8 @@
 extends Node2D  # Extiende de Node2D, proporcionando funcionalidades específicas para nodos en un espacio 2D.
 
-var speed_increase = 15.0  # Define cuánto incrementar la velocidad de las tuberías cada intervalo.
-var time_to_increase = 2  # Intervalo de tiempo en segundos para el aumento de velocidad.
-var elapsed_time = 0.0  # Acumulador de tiempo para controlar los incrementos de velocidad.
+var speed_increase = 15.0 
+var time_to_increase = 2  
+var elapsed_time = 0.0  
 
 # Configura la velocidad inicial de las tuberías; implementación depende de uso externo.
 func set_initial_velocity(initial_velocity: float) -> void:
@@ -11,8 +11,8 @@ func set_initial_velocity(initial_velocity: float) -> void:
 # Inicializa la posición de la tubería y establece una velocidad mínima al cargar.
 func _ready() -> void:
 	position.x = 190
-	position.y = randi_range(150, 300)  # Posición vertical aleatoria para cada tubería.
-	if Global.tube_velocity < 200.0:  # Asegura que la velocidad no sea menor de un mínimo.
+	position.y = randi_range(150, 300)  
+	if Global.tube_velocity < 200.0:  
 		Global.tube_velocity = 200.0
 
 # Actualiza la posición de las tuberías y maneja el incremento de velocidad basado en el tiempo.

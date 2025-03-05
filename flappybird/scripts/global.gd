@@ -22,7 +22,7 @@ func save_high_score():
 		file.close()
 
 func load_high_score():
-	# Carga el high score desde un archivo si existe, para mantener el record entre sesiones.
+	# Cargar el high score 
 	if FileAccess.file_exists(score_file_path):
 		var file = FileAccess.open(score_file_path, FileAccess.READ)
 		if file != null:
@@ -30,7 +30,7 @@ func load_high_score():
 			file.close()
 
 func update_high_score(new_score: int):
-	# Actualiza el high score si el nuevo score es mayor y guarda el nuevo high score.
+	# actualizar el scroe maximo
 	if new_score > high_score:
 		high_score = new_score
 		save_high_score()
