@@ -24,7 +24,7 @@ func esconderNivel():
 	$lNv1.hide()
 	$lNv2.hide()
 	$lNv3.hide()
-	$lNv4
+	$lNv4.hide()
 
 # Procesamiento por frame, no se usa aquí pero es requerido por la sintaxis.
 func _process(delta: float) -> void:
