@@ -25,7 +25,6 @@ Global="*res://scripts/global.gd"
 window/size/viewport_width=380
 window/size/viewport_height=512
 window/stretch/mode="canvas_items"
-window/handheld/orientation=1
 
 [dotnet]
 
