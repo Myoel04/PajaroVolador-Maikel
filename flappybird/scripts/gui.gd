@@ -24,6 +24,7 @@ func esconderNivel():
 	$lNv1.hide()
 	$lNv2.hide()
 	$lNv3.hide()
+	$lNv4
 
 # Procesamiento por frame, no se usa aquí pero es requerido por la sintaxis.
 func _process(delta: float) -> void:
@@ -42,6 +43,7 @@ func update_level_display():
 	$lNv1.hide()
 	$lNv2.hide()
 	$lNv3.hide()
+	$lNv4.hide()
 	match Global.nivel_actual:
 		1:
 			$lNv1.show()
@@ -49,6 +51,8 @@ func update_level_display():
 			$lNv2.show()
 		3:
 			$lNv3.show()
+		4:
+			$lNv4.show()
 
 # ACTUALIZAR LA PUNTUACIÓN MOSTRADA
 # Actualiza el label de puntuación y la visualización del nivel.

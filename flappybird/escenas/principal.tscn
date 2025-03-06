@@ -27,6 +27,11 @@ position = Vector2(144, 256)
 scale = Vector2(1.125, 1.99805)
 texture = ExtResource("1_pru4n")
 
+[node name="Background3" type="Sprite2D" parent="ParallaxBackground/Background3"]
+position = Vector2(528, 0.500618)
+scale = Vector2(1.125, 1.00489)
+texture = ExtResource("1_pru4n")
+
 [node name="ParallaxSuelo" type="Parallax2D" parent="."]
 repeat_size = Vector2(205, 0)
 autoscroll = Vector2(-60, 0)
@@ -36,9 +41,14 @@ position = Vector2(185.5, 524)
 scale = Vector2(1.80976, 1)
 texture = ExtResource("2_qsktu")
 
+[node name="Suelo3" type="Sprite2D" parent="ParallaxSuelo"]
+position = Vector2(910, 524)
+scale = Vector2(3.27523, 1)
+texture = ExtResource("2_qsktu")
+
 [node name="Pajaro" parent="." instance=ExtResource("3_yimyq")]
 z_index = 1
-position = Vector2(143, 323)
+position = Vector2(190, 357)
 
 [node name="TimerTuberia" type="Timer" parent="."]
 wait_time = 1.5

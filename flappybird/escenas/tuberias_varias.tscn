@@ -21,7 +21,7 @@ position = Vector2(240, 392)
 rotation = 3.14159
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(192, 0)
+position = Vector2(288, 0)
 
 [node name="Area2D" type="Area2D" parent="."]
 
